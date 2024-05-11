@@ -5,7 +5,6 @@ import {
 
 const isProtectedRoute = createRouteMatcher([
     '/dashboard(.*)',
-    '/protected(.*)', //seeing if my protected route works
   ]);
 
   export default clerkMiddleware((auth, req) => {
