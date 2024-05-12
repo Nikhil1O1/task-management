@@ -1,5 +1,7 @@
 node -v v18.19.0
 npx create-next-app@14.0.3 frontend
 npx shadcn-ui init
-npx shadcn-ui@latest add button
+npx shadcn-ui@latest add button skeleton accordion
+npx shadcn-ui@latest add accordion
 npm i @clerk/nextjs@4.30.0
+npm i usehooks-ts
