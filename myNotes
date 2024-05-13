@@ -5,3 +5,5 @@ npx shadcn-ui@latest add button skeleton accordion
 npx shadcn-ui@latest add accordion
 npm i @clerk/nextjs@4.30.0
 npm i usehooks-ts
+npm i zustand
+npx shadcn-ui@latest add sheet

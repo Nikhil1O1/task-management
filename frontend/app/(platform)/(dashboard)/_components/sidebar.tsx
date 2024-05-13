@@ -50,7 +50,10 @@ const Sidebar = (
     if(!isLoadedOrg || !isLoadedOrgList || userMemberships.isLoading){
         return(
             <>
-                <Skeleton />
+            <div className="flex items-center justify-between mb-2">
+                <Skeleton className="h-10 w-[50%]"/>
+                <Skeleton className="h-10 w-10"/>
+            </div>
             </>
         )
     }
@@ -68,7 +71,6 @@ const Sidebar = (
         variant = "ghost"
         className="ml-auto"
             >
-            
             <Link href="/select-org">
                 <Plus
                 className="h-4 w-4"
