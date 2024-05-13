@@ -7,3 +7,5 @@ npm i @clerk/nextjs@4.30.0
 npm i usehooks-ts
 npm i zustand
 npx shadcn-ui@latest add sheet
+npm i -D prisma
+npx prisma studio
