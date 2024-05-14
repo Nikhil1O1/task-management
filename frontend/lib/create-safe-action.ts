@@ -1,11 +1,11 @@
 import {z} from "zod";
 
-export type FieldError<T> = {
+export type FieldErrors<T> = {
     [K in keyof T]?: string[];
 };
 
 export type ActionState<TInput, TOutput> = {
-    fieldErrors: FieldError<TInput>;
+    fieldErrors?: FieldErrors<TInput>;
     error?: string | null;
     data?:TOutput
 }
@@ -18,7 +18,7 @@ export const createSafeAction = <TInput, TOutput>(
         const validationResult = schema.safeParse(data);
         if(!validationResult.success){
             return{
-                fieldErrors: validationResult.error.flatten().fieldErrors as FieldError<TInput>,
+                fieldErrors: validationResult.error.flatten().fieldErrors as FieldErrors<TInput>,
             }
         }
         
