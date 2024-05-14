@@ -8,6 +8,7 @@ npm i usehooks-ts
 npm i zustand
 npx shadcn-ui@latest add sheet
 npx shadcn-ui@latest add input
+npx shadcn-ui@latest add label
 npm i -D prisma
 npx prisma studio
 

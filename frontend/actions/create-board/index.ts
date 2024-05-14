@@ -8,6 +8,7 @@ import { createSafeAction } from "@/lib/create-safe-action";
 import { CreateBoard } from "./schema";
 
 const handler = async(data: InputType): Promise<ReturnType> => {
+
   const {userId} = auth();
   if(!userId){
     return{
@@ -17,13 +18,14 @@ const handler = async(data: InputType): Promise<ReturnType> => {
 
   const {title} = data;
   let board;
-
+  
   try{
+    // throw new Error("JUST ANOTHER ERROR");
     board = await db.board.create({
       data:{
         title,
       }
-    })
+    });
   }catch(error){
     return {
       error: "internal error"
