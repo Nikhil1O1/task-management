@@ -14,7 +14,6 @@ interface FormInputProps {
     placeholder?: string;
     required?: boolean;
     disabled?: boolean;
-    value?: string;
     errors?: Record<string, string[] | undefined>;
     className?: string;
     defaultValue?: string;
@@ -48,6 +47,7 @@ export const FormInput = forwardRef<HTMLInputElement, FormInputProps>(({
                     ):null}
                     <Input 
                     id={id}
+                    name = {id}
                     onBlur={onBlur}
                     defaultValue={defaultValue}
                     ref={ref}
